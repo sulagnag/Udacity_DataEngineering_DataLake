@@ -29,9 +29,9 @@ def create_spark_session():
 def process_song_data(spark, input_data, output_data):
     """
     Function for processing song data
-    spark - spark session
-    input_data - input directory for song data in json format
-    output_data - output directory for saving parquet files  (analytical tables)
+    spark : spark session
+    input_data : input directory for song data in json format
+    output_data : output directory for saving parquet files  (analytical tables)
     """
     # get filepath to song data file
     song_data = os.path.join(input_data,"song_data/*/*/*/*.json")
@@ -56,9 +56,9 @@ def process_song_data(spark, input_data, output_data):
 def process_log_data(spark, input_data, output_data):
     """
     Function for processing log data
-    spark - spark session
-    input_data - input directory for user log data in json format
-    output_data - output directory for saving parquet files  (analytical tables)
+    spark : spark session
+    input_data : input directory for user log data in json format
+    output_data : output directory for saving parquet files  (analytical tables)
     """
     # get filepath to log data file
     log_data =os.path.join(input_data,"log_data/*/*/*.json")
