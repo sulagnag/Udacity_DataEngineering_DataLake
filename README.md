@@ -6,9 +6,13 @@ The original data in the S3://udacity-dend bucket has 2 folders
 1. song data
 2. log data
 
-Song Data has the following fields
+A json file from the song data looks as follows:
 
-Log Data has the following fields
+{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
+
+A json file from the log Data looks like follows:
+
+![log-data](images/log-data.png)
 
 ## Processing using Spark SQL into Analytics tables
 We need to process the song and log data and create the following tables
