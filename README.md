@@ -2,7 +2,7 @@
 Build a Data Lake and ETL piepline in spark that loads data from S3, processes the data into analytics tables and loads them back into S3
 
 ## Original Data
-The original data in the S3://udacity-dend bucket has 2 folders
+The original data in the S3 bucket has 2 folders
 1. song data
 2. log data
 
