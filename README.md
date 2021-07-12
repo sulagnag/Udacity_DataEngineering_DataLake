@@ -25,6 +25,7 @@ We need to process the song and log data and create the following tables
 All the new tables are stored as parquet files.
 1. Users table is partitioned by year and month
 2. Songplay table is partitioned by year and month
+3. Time table is partitioned by year and month
 
 ## Getting started
 1. Create IAM user role with Administrator priviledges
