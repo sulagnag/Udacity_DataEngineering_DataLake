@@ -41,13 +41,13 @@ def process_song_data(spark, input_data, output_data):
     df.createOrReplaceTempView("song_all_data")
     
     # extract columns to create songs table
-    songs_table = spark.sql("select song_id, title, artist_id,year, duration from song_all_data")
+    songs_table = spark.sql("select DISTINCT song_id, title, artist_id,year, duration from song_all_data")
     
     # write songs table to parquet files partitioned by year and artist
     songs_table.write.partitionBy('year','artist_id').mode("overwrite").parquet(os.path.join(output_data +"songs"))
 
     # extract columns to create artists table
-    artists_table = spark.sql("select artist_id, artist_name, artist_location,artist_latitude, artist_longitude from song_all_data")
+    artists_table = spark.sql("select DISTINCT artist_id, artist_name, artist_location,artist_latitude, artist_longitude from song_all_data")
     
     # write artists table to parquet files
     artists_table.write.mode('overwrite').parquet(os.path.join(output_data + "artist"))
